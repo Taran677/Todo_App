@@ -1,3 +1,41 @@
 .empty-div {
     opacity: 0.4;
 }
+
+.notes {
+    background: #0f000f;
+    max-width: min-content;
+    color: white;
+}
+
+.one {
+    min-width: 70vh;
+    padding: 2vh;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+}
+
+@media screen and (max-width:450px) {
+    .one {
+        min-width: 40vh;
+    }
+}
+
+.col-2 {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.notes {
+    border-radius: 4vh;
+    overflow: hidden;
+}

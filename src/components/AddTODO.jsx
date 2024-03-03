@@ -1,25 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./AddTODO.module.css";
+import { toast } from 'react-toastify';
 
-function AddTODO({ onInputClick }) {
-  const [todoValue, setTodoValue] = useState(""); 
-  const [dateValue, setDateValue] = useState(""); 
-
- 
+function AddTODO({
+  onInputClick,
+  dateValue,
+  setDateValue,
+  todoValue,
+  setTodoValue,
+  add,
+  setAdd,
+}) {
   const handleTodoInputChange = (e) => {
     setTodoValue(e.target.value);
   };
 
-  
   const handleDateInputChange = (e) => {
-    setDateValue(e.target.value);
+    let updatedDate = e.target.value;
+    let currentDate = new Date().toISOString().split('T')[0]; // Get current date in yyyy-mm-dd format
+    if (updatedDate >= currentDate) {
+      setDateValue(updatedDate);
+    } else {
+      toast("Invalid Date");
+    }
   };
 
- 
   const handleButtonClick = () => {
-    onInputClick(todoValue, dateValue); 
-    setTodoValue(""); 
-    setDateValue(""); 
+    onInputClick(todoValue, dateValue);
+    setTodoValue("");
+    setDateValue("");
+    setAdd("Add");
   };
 
   return (
@@ -43,10 +53,10 @@ function AddTODO({ onInputClick }) {
         <div className="col-2">
           <button
             type="button"
-            className={`btn ${styles.add}`}
+            className={`btn ${styles.add} add`}
             onClick={handleButtonClick}
           >
-            Add
+            {add}
           </button>
         </div>
       </div>

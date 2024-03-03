@@ -3,9 +3,23 @@ function Empty() {
   return (
     <div className={`${css["empty-div"]}`}>
       {" "}
-      <h2 className="empty">Enjoy You Day!</h2>
-      <p className="emptyPara">No TODOs Found!</p>
-      <img src="https://raw.githubusercontent.com/Taran677/Todo_App/master/src/assets/TODOEMPTY.png" alt="¯\_(ツ)_/¯" />
+      <div className={`${css["notes"]}`}>
+        {" "}
+        <div className="top">
+          <h2 className="empty">Enjoy You Day!</h2>
+          <p className="emptyPara">No TODOs Found!</p>
+        </div>
+        <div className={`${css["one"]}`}>[]</div>
+        <div className={`${css["one"]}`}>[]</div>
+        <div className={`${css["one"]}`}>[]</div>
+        <div className={` ${css["one"]}`}>
+          <div>[]</div>
+          <div className="empty-man">¯\_(ツ)_/¯</div>
+        </div>
+        <div className={`${css["one"]}`}>[]</div>
+        <div className={`${css["one"]}`}>[]</div>
+        <div className={`${css["one"]}`}>[]</div>
+      </div>
     </div>
   );
 }

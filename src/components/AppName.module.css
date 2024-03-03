@@ -1,0 +1,35 @@
+@media screen and (min-width: 475px) {
+    :root {
+        --degrees: ;
+        --translatelength: ;
+        --degreesy: ;
+        --translatelengthy: ;
+    }
+
+}
+
+@media screen and (max-width: 475px) and (min-width: 0px) {
+    :root {
+        --degrees: 0;
+        --translatelength: 0;
+        --degreesy: 0;
+        --translatelengthy: 0;
+    }
+
+}
+
+.header {
+    font-family: "Kumbh Sans", serif !important;
+    font-weight: 700;
+    padding: 2rem 0;
+    color: blueviolet;
+    transition-duration: 0.3s;
+
+}
+
+.header:hover {
+    transform: rotate3D(1, 1, 1, var(--degrees)) translate(var(--translatelength), var(--translatelengthy));
+    transition-duration: 0.2s;
+    text-decoration: line-through blueviolet;
+    color: rgb(185, 139, 227);
+}

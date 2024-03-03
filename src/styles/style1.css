@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&family=Space+Grotesk:wght@300;500&display=swap');
+
+
+
+body {
+    background: #f8f0ff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Kumbh Sans", serif;
+}
+
+
+
+button {
+    margin: 0.5em !important;
+    display: flex;
+    flex-grow: 1;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.btn {
+    background-color: rgb(173, 154, 190);
+}
+
+.btn:hover {
+    background-color: rgb(125, 88, 157);
+    color: rgb(204, 179, 227);
+}
+
+
+
+.col-6,
+.col-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-2 {
+    display: flex;
+}
+
+div[id^="todoItem-"] {
+    overflow: scroll;
+}
+
+div[id^="todoItem-"]::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width:475px) {
+    .row {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div[class ^="col-"] {
+        min-width: 50vw !important;
+        margin: 10px 0;
+    }
+
+    .col-2 {
+        translate: -3vw;
+    }
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.spl {
+    background: rgba(135, 120, 139, 0.206);
+    border-radius: 0;
+}

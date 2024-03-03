@@ -1,0 +1,21 @@
+.add {
+    background-color: rgb(190, 154, 189) !important;
+}
+
+.add:hover {
+    background-color: rgb(119, 75, 126) !important;
+    color: rgb(204, 179, 227) !important;
+}
+
+input {
+    border: 1px solid blueviolet !important;
+    color: rgb(0, 0, 0);
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}

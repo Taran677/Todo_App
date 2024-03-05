@@ -14,7 +14,7 @@ function App() {
   const [dateValue, setDateValue] = useState("");
   const [timeValue, setTimeValue] = useState("");
   const [add, setAdd] = useState("Add");
-  const onInputClick = (textValue, dateValue) => {
+  const onInputClick = (textValue, dateValue, timeValue) => {
     const newTodoItem = {
       name: textValue,
       dueDate: dateValue,

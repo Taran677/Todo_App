@@ -46,6 +46,9 @@ function AddTODO({
   };
 
   const handleButtonClick = () => {
+    if (todoValue === "" || dateValue === "" || timeValue === "") {
+      toast("Please fill required info");
+    }
     onInputClick(todoValue, dateValue, timeValue);
     setTodoValue("");
     setDateValue("");

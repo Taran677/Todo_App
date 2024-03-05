@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import AddTODO from "./components/AddTODO.jsx";
 import Appname from "./components/AppName";
 import "./styles/style1.css";
@@ -13,12 +12,14 @@ function App() {
   const [todoItems, setTodoItems] = useState([]);
   const [todoValue, setTodoValue] = useState("");
   const [dateValue, setDateValue] = useState("");
+  const [timeValue, setTimeValue] = useState("");
   const [add, setAdd] = useState("Add");
   const onInputClick = (textValue, dateValue) => {
     const newTodoItem = {
       name: textValue,
       dueDate: dateValue,
       isDeleted: false,
+      dueTime: timeValue
     };
 
     if (textValue !== "" && dateValue !== "") {
@@ -37,6 +38,8 @@ function App() {
         setDateValue={setDateValue}
         add={add}
         setAdd={setAdd}
+        timeValue={timeValue}
+        setTimeValue={setTimeValue}
       />
       <TodoItem
         setTodoItems={setTodoItems}
@@ -47,6 +50,8 @@ function App() {
         dateValue={dateValue}
         add={add}
         setAdd={setAdd}
+        timeValue={timeValue}
+        setTimeValue={setTimeValue}
       />
       {todoItems.length === 0 && <Empty />}
       <ToastContainer></ToastContainer>

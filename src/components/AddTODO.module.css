@@ -1,21 +1,33 @@
 .add {
-    background-color: rgb(190, 154, 189) !important;
+    background-color: rgb(100, 165, 255) !important;
+    margin: 2px !important;
+    border: 0px;
+    padding: 1vh 7vh;
+    border-radius: 1.4vh;
+    transition: 0.2s;
 }
+
 
 .add:hover {
-    background-color: rgb(119, 75, 126) !important;
-    color: rgb(204, 179, 227) !important;
+    background-color: rgb(76, 148, 204) !important;
 }
 
+
+
 input {
-    border: 1px solid blueviolet !important;
-    color: rgb(0, 0, 0);
+    border: 2px solid rgb(109, 182, 255) !important;
+    color: rgb(14, 20, 76);
     padding: 0.3em;
     border-radius: 0.3em;
+    width: 70%;
+}
+
+input:hover {
+    border: 2px solid rgb(86, 186, 131) !important;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-    outline: none;
+    outline: rgb(28, 75, 111) 1px solid;
 }

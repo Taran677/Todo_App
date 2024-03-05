@@ -2,10 +2,15 @@
     opacity: 0.4;
 }
 
+body {
+    background: #fbfffb;
+}
+
 .notes {
-    background: #0f000f;
+    background: #00003c;
     max-width: min-content;
     color: white;
+    margin-bottom: 1em;
 }
 
 .one {
@@ -14,6 +19,7 @@
     align-items: center;
     display: flex;
     justify-content: start;
+    color: rgb(91, 222, 122) !important;
 }
 
 @media screen and (max-width:450px) {

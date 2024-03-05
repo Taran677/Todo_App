@@ -3,7 +3,8 @@
 
 
 body {
-    background: #f8f0ff;
+    background: #ffffff;
+    overflow-wrap: break-word;
 }
 
 * {
@@ -12,8 +13,25 @@ body {
     font-family: "Kumbh Sans", serif;
 }
 
+h1 {
+    font-size: 3em !important;
+}
+
+.col-5,
+div[id^="todoItem-"] {
+    word-break: break-word;
+}
+
 .spl {
     margin: 1vh;
+}
+
+.container {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .empty-man {
@@ -26,36 +44,125 @@ body {
 }
 
 
-
 button {
     margin: 0.5em !important;
     display: flex;
 }
 
 .top {
-    background: rgb(162, 100, 183);
+    background: rgb(91, 222, 122) !important;
     padding: 0.5em;
+    color: rgb(0, 161, 43) !important;
 }
 
 .add {
-    background-color: rgb(173, 154, 190);
-    min-width: 100%;
-    max-width: 100%;
+    background-color: rgb(154, 190, 173);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6em;
 }
 
-.del,
+.addContainer {
+    border: solid 1px rgb(148, 184, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    border-radius: 0.6em;
+}
+
+.row-head {
+    background: rgb(228, 236, 255) !important;
+    border: 2px blue dashed;
+    border-radius: 2vh;
+    margin: 3vh 0;
+    padding: 1vh;
+    width: 100%;
+    display: flex;
+    max-width: 100%;
+    padding-top: 2vh;
+}
+
+.headContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.col-2 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px !important;
+    color: rgb(100, 165, 255)
+}
+
+.row-head {
+    padding-bottom: 2vh;
+}
+
 .edit {
     max-width: 50% !important;
-    background-color: rgb(173, 154, 190);
+    background-color: rgba(47, 255, 71, 0.077);
+    color: rgb(67, 164, 67);
+    border: dotted 1px green;
+    border-radius: 1vh;
+    padding: 1vh;
+}
+
+.del {
+    border-radius: 100%;
+    border: solid 1px green;
+    aspect-ratio: 1 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 3vh;
+    min-width: 3vh;
+    background: transparent !important;
+}
+
+.del img {
+    object-fit: cover;
+    max-width: 3vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.del:hover {
+    background: transparent !important;
+    border: solid 1px green;
 }
 
 .btn:hover {
-    background-color: rgb(125, 88, 157);
-    color: rgb(204, 179, 227);
+    background-color: rgb(114, 151, 136);
+    color: rgb(166, 255, 230);
 }
 
 .col-5 {
     text-align: left;
+    overflow-wrap: break-word !important;
+    padding-left: 1vh;
+}
+
+.row div input {
+    padding: 1vh;
+    border-radius: 1vh;
+    margin: 0 2vh;
+}
+
+.row div {
+    width: 100%;
 }
 
 div[id^="todoItem-"] {
@@ -74,8 +181,12 @@ div[id^="todoItem-"]::-webkit-scrollbar {
         justify-content: center;
     }
 
+    .row div input {
+
+        margin: 0 0.5vh;
+    }
+
     div[class ^="col-"] {
-        min-width: 50vw !important;
         margin: 10px 0;
     }
 
@@ -89,16 +200,66 @@ div[id^="todoItem-"]::-webkit-scrollbar {
     background: rgb(255, 255, 255);
     border-radius: 0;
     border-radius: 2vh;
-    border: rgb(168, 43, 226) solid 1px;
+    border: rgb(143, 202, 167) solid 1px;
+    margin: 10px;
 }
 
 .spl:hover {
-    background-color: rgba(179, 0, 255, 0.031);
+    background-color: rgba(0, 255, 13, 0.055);
+    border: 2px solid rgb(94, 160, 121);
+    margin: 9px;
 }
 
 .row {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    min-width: 90%;
+    width: auto;
+}
+
+.date {
+    opacity: 0.5;
+}
+
+.col-3 {
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(0, 48, 0);
+    display: flex;
+    flex-direction: row;
+    min-width: 100% !important;
+    background: rgb(143, 202, 167);
+    padding: 1vh 6vh;
+    margin: 0 !important;
+    translate: 1vh;
+}
+
+.col-5 {
+    font-size: 1.1em;
+    color: rgb(0, 53, 0);
+    opacity: 0.9;
+    font-weight: 500;
+    margin: 10px;
+    overflow-wrap: break-word !important;
+    max-width: 70%;
+    height: auto;
+}
+
+.dueDate {
+    color: rgb(234, 255, 243);
+    opacity: 1 !important;
+    font-weight: 900;
+}
+
+.date {
+    color: rgb(228, 255, 232);
+    font-weight: 500;
+}
+
+.col-4 {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 10px;
 }

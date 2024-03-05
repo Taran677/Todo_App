@@ -1,11 +1,6 @@
 setTimeout(() => {
   let header = document.getElementsByTagName("h1")[0];
-  header.onmouseover = () => {
-    header.style.color = "#bc8ed0";
-  };
-  header.onmouseout = () => {
-    header.style.color = "#af66ce";
-  };
+
   let getWidth = () => {
     let winWidth;
     return (winWidth = window.innerWidth);
